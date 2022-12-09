@@ -4,13 +4,13 @@ const userSchema = mongoose.Schema({
   imageUrl: {
     type: String,
   },
-  firstName: {
+  firstname: {
     type: String,
     required: true,
     min: 3,
     max: 20,
   },
-  lastName: {
+  lastname: {
     type: String,
     required: true,
     min: 3,

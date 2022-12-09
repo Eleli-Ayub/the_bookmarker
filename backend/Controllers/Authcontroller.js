@@ -36,7 +36,7 @@ module.exports.signUp = async (req, res) => {
     }
     // send data to the user if login was successful and token is valid
     res.status(200).json({
-      message: "Sign in successful",
+      message: "Sign up successful",
       login: true,
       data: { userId: user.id, email: user.email, token: token },
     });
@@ -46,7 +46,7 @@ module.exports.signUp = async (req, res) => {
   }
 };
 
-module.exports.signIn = async (req, res) => {
+module.exports.signIn = async (req, res, next) => {
   // get data from the user request
   const { email, password } = req.body;
   //   find if email exist in the user database
@@ -66,7 +66,6 @@ module.exports.signIn = async (req, res) => {
       try {
         token = jwt.sign({ email, password }, process.env.SECRET_KEY, {
           expiresIn: "3h",
-          h,
         });
       } catch (error) {
         // display errors
