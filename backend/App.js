@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 // connect to the database
-mongoose.connect(process.env.MONGO_URL, (error) => {
+const connect = mongoose.connect(process.env.MONGO_URL, (error) => {
   if (error) {
     console.log(error);
   } else {
