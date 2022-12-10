@@ -40,7 +40,7 @@ module.exports.deleteTask = async (req, res) => {
         });
       } else {
         res.json({
-          message: `Task ${title} deleted successfully`,
+          message: `Task ${id} deleted successfully`,
           success: true,
         });
       }
@@ -59,7 +59,7 @@ module.exports.editTask = async (req, res) => {
       if (error) {
         console.log(error);
         const err = new Error("Error!! Something went wrong!");
-        return next(err);
+        return err;
       } else {
         res.json({
           message: `Task Edited to  "${text}"`,
@@ -106,6 +106,6 @@ module.exports.getTasks = async (req, res) => {
   } catch (error) {
     console.log(error);
     const err = new Error("Error!! Something went wrong!");
-    return next(err);
+    return err;
   }
 };

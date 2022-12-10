@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 const userRouter = require("./API/Authapi");
 const taskRouter = require("./API/Taskapi");
+const activityRouter = require("./API/Activityapi");
 const { verifyJwt } = require("./Controllers/Authcontroller");
 const port = process.env.PORT || 4000;
 
@@ -26,6 +27,7 @@ mongoose.connect(
 
 app.use("/api/users", userRouter);
 app.use("/api/task", verifyJwt, taskRouter);
+app.use("/api/activity", verifyJwt, activityRouter);
 
 app.listen(port, (error) => {
   if (error) {
