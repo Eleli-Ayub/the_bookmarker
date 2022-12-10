@@ -13,13 +13,13 @@ app.get("/", (req, res) => {
 });
 
 // connect to the database
-// mongoose.connect(process.env.MONGO_URL, (error) => {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log("Connection to db succesfull");
-//   }
-// });
+mongoose.connect(process.env.MONGO_URL, (error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Connection to db succesfull");
+  }
+});
 
 app.use("/api/users", userRouter);
 app.use("/api/task", verifyJwt, taskRouter);
