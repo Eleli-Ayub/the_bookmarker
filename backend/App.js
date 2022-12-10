@@ -21,8 +21,8 @@ app.get("/", (req, res) => {
 //   }
 // });
 
-// app.use("/api/users", userRouter);
-// app.use("/api/task", verifyJwt, taskRouter);
+app.use("/api/users", userRouter);
+app.use("/api/task", verifyJwt, taskRouter);
 
 app.listen(port, (error) => {
   if (error) {
