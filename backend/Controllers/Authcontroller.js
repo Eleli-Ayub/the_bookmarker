@@ -2,6 +2,26 @@ const User = require("../Models/Usermodel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+// Verify the jwt
+module.exports.verifyJwt = (req, res, next) => {
+  const token = req.headers["x-access-token"];
+  if (!token) {
+    res.json({
+      message: "Missing token",
+      auth: false,
+    });
+  } else {
+    jwt.verify(token, process.env.SECRET_KEY, (error, decoded) => {
+      if (error) {
+        res.json({ message: "Authentication failed", auth: false });
+      } else {
+        req.userId = decoded.id;
+        next();
+      }
+    });
+  }
+};
+
 module.exports.signUp = async (req, res) => {
   const saltRounds = 10;
 
@@ -81,7 +101,4 @@ module.exports.signIn = async (req, res, next) => {
       });
     }
   }
-};
-const signOut = () => {
-  console.log("Signed out");
 };

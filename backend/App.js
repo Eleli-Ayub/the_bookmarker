@@ -3,7 +3,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const userRouter = require("./API/Authapi");
-
+const taskRouter = require("./API/Taskapi");
+const { verifyJwt } = require("./Controllers/Authcontroller");
 const port = process.env.PORT || 4000;
 
 app.use(express.json());
@@ -18,6 +19,7 @@ mongoose.connect(process.env.MONGO_URL, (error) => {
 });
 
 app.use("/api/users", userRouter);
+app.use("/api/task", verifyJwt, taskRouter);
 
 app.listen(port, (error) => {
   if (error) {
