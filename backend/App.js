@@ -8,6 +8,9 @@ const { verifyJwt } = require("./Controllers/Authcontroller");
 const port = process.env.PORT || 4000;
 
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
 
 // connect to the database
 mongoose.connect(process.env.MONGO_URL, (error) => {
