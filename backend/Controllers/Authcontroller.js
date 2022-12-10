@@ -94,7 +94,6 @@ module.exports.signIn = async (req, res, next) => {
         return next(err);
       }
       //   send back data to the user incase of successful login
-      res.send("lOGGED IN");
       res.status(200).json({
         message: "Login Successful",
         login: true,
