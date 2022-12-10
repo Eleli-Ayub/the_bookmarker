@@ -13,12 +13,15 @@ app.get("/", (req, res) => {
 });
 
 // connect to the database
-mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
+mongoose.connect(
+  "mongodb+srv://the_bookmarker:bookmark@thebookmarker.esne3by.mongodb.net/users?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  }
+);
 
 app.use("/api/users", userRouter);
 app.use("/api/task", verifyJwt, taskRouter);
