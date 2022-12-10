@@ -22,7 +22,7 @@ try {
     }
   });
 } catch (error) {
-  console.log(erro);
+  console.log(error);
 }
 
 app.use("/api/users", userRouter);
