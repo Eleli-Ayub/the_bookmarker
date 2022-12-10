@@ -62,7 +62,7 @@ module.exports.editTask = async (req, res) => {
         return next(err);
       } else {
         res.json({
-          message: `Task ${id} Edited successfully`,
+          message: `Task Edited to  "${text}"`,
           success: true,
         });
       }
@@ -70,7 +70,7 @@ module.exports.editTask = async (req, res) => {
   } catch (error) {
     console.log(error);
     const err = new Error("Error!! Something went wrong!");
-    return next(err);
+    return err;
   }
 };
 module.exports.completeTask = (req, res) => {
