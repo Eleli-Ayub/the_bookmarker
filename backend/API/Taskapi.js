@@ -10,7 +10,7 @@ const {
 const router = require("express").Router();
 
 router.post("/addtask", addTask);
-router.post("/removetask", deleteTask);
+router.post("/deletetask", deleteTask);
 router.post("/edittask", editTask);
 router.post("/completetask", completeTask);
 router.get("/gettasks", getTasks);

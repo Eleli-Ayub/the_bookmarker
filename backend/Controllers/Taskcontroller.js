@@ -14,7 +14,7 @@ module.exports.addTask = async (req, res) => {
     try {
       const task = await newTask.save();
       res.json({
-        message: `Task " ${title} " added successfully`,
+        message: `Task " ${title} added successfully`,
         success: true,
       });
     } catch (error) {
@@ -40,7 +40,7 @@ module.exports.deleteTask = async (req, res) => {
         });
       } else {
         res.json({
-          message: `Task ${id} deleted successfully`,
+          message: `Task ${title} deleted successfully`,
           success: true,
         });
       }
@@ -48,7 +48,7 @@ module.exports.deleteTask = async (req, res) => {
   } catch (error) {
     console.log(error);
     const err = new Error("Error!! Something went wrong!");
-    return next(err);
+    return err;
   }
 };
 module.exports.editTask = async (req, res) => {
@@ -84,7 +84,7 @@ module.exports.completeTask = (req, res) => {
         return next(err);
       } else {
         res.json({
-          message: `Task ${id} completed`,
+          message: `Task ${id} was done`,
           success: true,
         });
       }
@@ -96,17 +96,16 @@ module.exports.completeTask = (req, res) => {
   }
 };
 module.exports.getTasks = async (req, res) => {
-  const tasks = await Task.find({}, (error, results) => {
-    if (error) {
-      console.log(error);
-      const err = new Error("Error!! Something went wrong!");
-      return next(err);
-    } else {
-      res.json({
-        message: "Task Fetched successfully",
-        tasks: tasks,
-        success: true,
-      });
-    }
-  });
+  try {
+    const tasks = await Task.find();
+    res.json({
+      message: "Tasks Fetched successfully",
+      tasks: tasks,
+      success: true,
+    });
+  } catch (error) {
+    console.log(error);
+    const err = new Error("Error!! Something went wrong!");
+    return next(err);
+  }
 };
