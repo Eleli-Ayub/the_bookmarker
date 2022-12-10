@@ -15,11 +15,12 @@ app.get("/", (req, res) => {
 // connect to the database
 mongoose.connect(
   "mongodb+srv://the_bookmarker:bookmark@thebookmarker.esne3by.mongodb.net/users?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
+  (error) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Connection to db succesfull");
+    }
   }
 );
 
