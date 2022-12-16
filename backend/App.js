@@ -6,7 +6,7 @@ const userRouter = require("./API/Authapi");
 const taskRouter = require("./API/Taskapi");
 const activityRouter = require("./API/Activityapi");
 const { verifyJwt } = require("./Controllers/Authcontroller");
-const port = process.env.PORT || 4000;
+const PORT = process.env.port || 4000;
 
 app.use(express.json());
 app.get("/", (req, res) => {
@@ -29,11 +29,11 @@ app.use("/api/users", userRouter);
 app.use("/api/task", verifyJwt, taskRouter);
 app.use("/api/activity", verifyJwt, activityRouter);
 
-app.listen(port, (error) => {
+app.listen(PORT, (error) => {
   if (error) {
     console.log(error);
   } else {
-    console.log("Server is running on port " + port);
+    console.log("Server is running on port " + PORT);
   }
 });
 

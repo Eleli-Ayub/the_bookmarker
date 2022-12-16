@@ -3,7 +3,7 @@ const {
   addActivity,
   deleteActivity,
   editActivity,
-  deleteActivity,
+  getActivities,
 } = require("../Controllers/Activitycontroller");
 
 router.post("/addactivity", addActivity);

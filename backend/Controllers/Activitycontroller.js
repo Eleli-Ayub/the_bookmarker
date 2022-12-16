@@ -86,7 +86,7 @@ module.exports.editActivity = async (req, res) => {
     return err;
   }
 };
-module.exports.deleteActivity = async (res, res) => {
+module.exports.deleteActivity = async (req, res) => {
   const id = req.body.id;
 
   try {
