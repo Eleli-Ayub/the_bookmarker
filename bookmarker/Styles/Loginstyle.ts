@@ -29,8 +29,7 @@ export const Loginstyles = StyleSheet.create({
         borderBottomWidth: 1,
         width: deviceWidth * 0.7,
         borderBottomColor: "#fff",
-        margin: 20,
-        marginBottom: 10,
+        margin: 10,
         padding: 10,
         textAlign: "center",
         color: "#fff",
@@ -50,7 +49,7 @@ export const Loginstyles = StyleSheet.create({
     signupLink:{
         marginTop: 10,
         color: "#6F8EDF",
-        marginBottom: 100
+        marginBottom: 60
     },
     socials:{
         flexDirection: "row",
