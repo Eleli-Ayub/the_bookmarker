@@ -15,8 +15,10 @@ import {
   FontAwesome,
   FontAwesome5,
 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
+  const navigation = useNavigation();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
@@ -42,10 +44,14 @@ const Login = () => {
         <TouchableOpacity style={Loginstyles.loginBtn}>
           <Text style={Loginstyles.loginBtnText}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Register");
+          }}
+        >
           <Text style={Loginstyles.signupLink}>
             {" "}
-            Dont have an account. Sign Up?
+            Don't have an account. Sign Up?
           </Text>
         </TouchableOpacity>
         <View style={Loginstyles.socials}>

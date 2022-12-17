@@ -19,17 +19,22 @@ export const Loginstyles = StyleSheet.create({
         fontWeight: "bold",
         marginBottom: 50
     },
+    registerTitleText:{
+        color: "#fff",
+        fontSize: 20,
+        fontWeight: "bold",
+        marginBottom: 0
+    },
     textInput:{
         borderBottomWidth: 1,
         width: deviceWidth * 0.7,
         borderBottomColor: "#fff",
         margin: 20,
+        marginBottom: 10,
         padding: 10,
         textAlign: "center",
         color: "#fff",
-        fontSize: 20,
-        fontWeight: "bold",
-        backgroundColor: "rgba(255,255,255,0.04)"
+        fontSize: 18,
     },
     loginBtn:{
         backgroundColor: "#4BE9C3",

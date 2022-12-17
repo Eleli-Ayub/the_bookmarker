@@ -1,4 +1,10 @@
-import { View, Text, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  KeyboardAvoidingView,
+  KeyboardAvoidingViewBase,
+} from "react-native";
 import React from "react";
 import { Inputtype_I } from "../../Global/Types";
 import { Loginstyles } from "../../Styles/Loginstyle";
@@ -13,6 +19,7 @@ const Inputfield = ({
     <TextInput
       style={Loginstyles.textInput}
       placeholder={placeholder}
+      placeholderTextColor="#64748b"
       value={inputvalue}
       keyboardType={keyboard_type}
       onChangeText={(newText) => setText(newText)}
