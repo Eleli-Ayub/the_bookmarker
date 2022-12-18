@@ -99,6 +99,87 @@ export const Homepagestyles = StyleSheet.create({
     description:{
         fontSize: 12,
         color: "#FFC2C2"
-    },    
+    },
+    activities:{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        marginTop: 40,
+    },
+    activitiesTitle:{
+        color: "#fff",
+        fontSize: 15,
+        fontStyle: "italic",
+        marginTop: 20,
+        marginLeft: 15
+    },
+    ActivitylistsectiontitleBtn:{
+        backgroundColor: "#6B6868",
+        borderRadius: 15
+    },
+    ActivitylistsectiontitleBtnText:{
+        color: "#FFF",
+        fontSize: 12,
+        paddingHorizontal: 10,
+        paddingVertical: 5
+    },
+   
+    activityListTitle:{
+        color: "#FFF",
+        fontSize: 15,
+    },
+    activitiesTitles:{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 20,
+        marginHorizontal: 20,
+        borderBottomWidth: 1,
+        borderBottomColor: "#6B6868"
+    },
+    activitiesTitlesTitle:{
+        color: "#fff",
+        fontStyle: "italic",
+        fontSize: 12,
+        marginLeft:10
+    },
+    activitiesTitlesDate:{
+        color: "#fff",
+        marginRight: 20,
+        fontStyle: "italic",
+        fontSize: 12
+    },
+    activityListItemWrapper:{
+        borderBottomWidth: 1,
+        borderBottomColor: "#414040",
+        marginHorizontal:15,
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        paddingVertical: 20,
+    },
+    activityListIndexnumber:{
+        color:"#fff"
+    },
+    activityListItemText:{
+        color: "#F6E5E5",
+        fontStyle: "italic",
+        marginLeft: 20
+    },
+    activityTimes:{
+        display: "flex",
+        flexDirection: "row",
+        flex: 1,
+        justifyContent: "flex-end",
+    },
+    activityListDate:{
+        color: "#F6E5E5",
+        fontStyle: "italic",
+    },
+    activityListTime:{
+        color: "#F6E5E5",
+        fontStyle: "italic",
+        marginLeft: 10,
+    }
 
 })

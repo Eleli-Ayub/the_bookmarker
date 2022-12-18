@@ -12,3 +12,13 @@ export interface Scrollbar_I {
     time: String,
     description: String
   }
+  export  interface Activitylistsectiontitle_I{
+    callback: () => void,
+    text: String
+  }
+  export interface ActivityListItem_I{
+    number: number,
+    title: String,
+    date: number,
+    time: number,
+  }
