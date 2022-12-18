@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "../Screens/Auth/Login";
 import Register from "../Screens/Auth/Register";
 import { StatusBar } from "expo-status-bar";
+import Homepage from "../Screens/Homepage";
 
 const index = () => {
   const Stack = createNativeStackNavigator();
@@ -18,6 +19,11 @@ const index = () => {
       <Stack.Screen
         name="Register"
         component={Register}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Homepage}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

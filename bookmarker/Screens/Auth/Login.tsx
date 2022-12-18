@@ -41,7 +41,12 @@ const Login = () => {
           setText={setPassword}
           placeholder="Password"
         />
-        <TouchableOpacity style={Loginstyles.loginBtn}>
+        <TouchableOpacity
+          style={Loginstyles.loginBtn}
+          onPress={() => {
+            navigation.navigate("Home");
+          }}
+        >
           <Text style={Loginstyles.loginBtnText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
