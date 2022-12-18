@@ -49,19 +49,19 @@ export const Tasks=[
     },
     {
         title: "Do assignments",
-        idDone: false
+        idDone: true
     },
     {
         title: "Workout",
-        idDone: false
+        idDone: true
     },
     {
         title: "Connect to API",
-        idDone: false
+        idDone: true
     },
     {
         title: "Deploy website",
-        idDone: false
+        idDone: true
     },
     {
         title: "Install antivirus",

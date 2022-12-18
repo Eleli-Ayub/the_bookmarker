@@ -23,12 +23,13 @@ const Taskslist = () => {
       </View>
       <Text style={Homepagestyles.activitiesTitle}>Tasks</Text>
       <View style={Homepagestyles.tasksWrapper}>
-        {Tasks.map((activity, index) => {
+        {Tasks.map((task, index) => {
           return (
             <TaskListItem
               key={index}
               number={index + 1}
-              text={activity.title}
+              text={task.title}
+              isDone={task.idDone}
             />
           );
         })}

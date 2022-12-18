@@ -24,5 +24,6 @@ export interface Scrollbar_I {
   }
   export interface Taskslist_I{
     number: number,
-    text: String
+    text: String,
+    isDone: boolean
   }

@@ -214,8 +214,8 @@ export const Homepagestyles = StyleSheet.create({
     taskCheckbox:{   
         height: 20,
         width: 20,
-        borderColor: "#fff",
-        borderWidth: 1,
+        // borderColor: "#fff",
+        // borderWidth: 1,
         marginRight:10
     },
     taskTitleText:{
