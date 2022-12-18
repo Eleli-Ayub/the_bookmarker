@@ -180,6 +180,48 @@ export const Homepagestyles = StyleSheet.create({
         color: "#F6E5E5",
         fontStyle: "italic",
         marginLeft: 10,
-    }
+    },
+    gotoTasksBtn:{
+        height: deviceHeight * 0.05,
+        width: deviceWidth * 0.4,
+        backgroundColor: "#D9D9D9",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 5,
+        alignSelf: "center",
+        marginTop: 60,
+    },
+    tasksWrapper:{
+        display: "flex",
+        flexWrap: "wrap",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginHorizontal: 20,
+        marginVertical: 10
+    },
+    taskWrapper:{
+        width: deviceWidth * 0.42,
+        display: "flex",
+        flexDirection: "row",
+        padding: 5,
+        marginVertical: 10 
+    },
+    taskNumberText:{
+        color: "#fff",
+        fontSize: 12,
+        marginRight: 20
+    },
+    taskCheckbox:{   
+        height: 20,
+        width: 20,
+        borderColor: "#fff",
+        borderWidth: 1,
+        marginRight:10
+    },
+    taskTitleText:{
+        color: "#fff",
+        fontSize: 12,
+        fontStyle: "italic"
+    },
 
 })

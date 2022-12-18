@@ -4,6 +4,8 @@ import Header from "../Components/Homepage/Header";
 import Activityscrollbar from "../Components/Homepage/Activityscrollbar";
 import { Homepagestyles } from "../Styles/Homepage";
 import Activitylistsection from "../Components/Homepage/Activitylistsection";
+import Gototasks from "../Components/Homepage/Gototasks";
+import Taskslist from "../Components/Homepage/Taskslist";
 
 const Homepage = () => {
   return (
@@ -11,6 +13,8 @@ const Homepage = () => {
       <Header />
       <Activityscrollbar />
       <Activitylistsection />
+      <Gototasks />
+      <Taskslist />
     </ScrollView>
   );
 };

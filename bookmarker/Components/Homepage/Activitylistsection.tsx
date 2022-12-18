@@ -11,7 +11,7 @@ const Activitylistsection = () => {
     "This month activities",
   ];
   return (
-    <View style={Homepagestyles.activitiesWrapper}>
+    <View>
       <View style={Homepagestyles.activities}>
         {titles.map((title, index) => {
           return (

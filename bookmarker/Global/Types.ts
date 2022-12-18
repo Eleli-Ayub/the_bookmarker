@@ -22,3 +22,7 @@ export interface Scrollbar_I {
     date: number,
     time: number,
   }
+  export interface Taskslist_I{
+    number: number,
+    text: String
+  }

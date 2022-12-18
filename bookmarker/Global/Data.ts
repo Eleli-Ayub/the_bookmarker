@@ -42,3 +42,53 @@ export const activities =[
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
     },
 ]
+export const Tasks=[
+    {
+        title: "Style the button",
+        idDone: false
+    },
+    {
+        title: "Do assignments",
+        idDone: false
+    },
+    {
+        title: "Workout",
+        idDone: false
+    },
+    {
+        title: "Connect to API",
+        idDone: false
+    },
+    {
+        title: "Deploy website",
+        idDone: false
+    },
+    {
+        title: "Install antivirus",
+        idDone: false
+    },
+    {
+        title: "Call your friend",
+        idDone: false
+    },
+    {
+        title: "LOgin to kra",
+        idDone: false
+    },
+    {
+        title: "Create About page",
+        idDone: false
+    },
+    {
+        title: "Style the Homepage",
+        idDone: false
+    },
+    {
+        title: "Create footer",
+        idDone: false
+    },
+    {
+        title: "Create Homepage",
+        idDone: false
+    },
+]
