@@ -6,3 +6,9 @@ export interface Inputtype_I{
     placeholder: string;
     setText: (input: string) => void;
 }
+export interface Scrollbar_I {
+    title: String,
+    location: String,
+    time: String,
+    description: String
+  }
