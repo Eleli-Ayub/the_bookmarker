@@ -19,8 +19,8 @@ export interface Scrollbar_I {
   export interface ActivityListItem_I{
     number: number,
     title: String,
-    date: number,
-    time: number,
+    date: String,
+    time: String,
   }
   export interface Taskslist_I{
     number: number,
