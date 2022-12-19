@@ -6,6 +6,7 @@ import { Homepagestyles } from "../Styles/Homepage";
 import Activitylistsection from "../Components/Homepage/Activitylistsection";
 import Gototasks from "../Components/Homepage/Gototasks";
 import Taskslist from "../Components/Homepage/Taskslist";
+import Footer from "../Components/Footer";
 
 const Homepage = () => {
   return (
@@ -15,6 +16,7 @@ const Homepage = () => {
       <Activitylistsection />
       <Gototasks />
       <Taskslist />
+      <Footer />
     </ScrollView>
   );
 };
