@@ -4,8 +4,14 @@ import { Modalstyles } from "../../Styles/Modalstyles";
 import { Addtaskmodal_I } from "../../Global/Types";
 import Inputfield from "../LoginComponents/Inputfield";
 
-const Addtaskmodal = ({ modalVisible, setModalVisible }: Addtaskmodal_I) => {
+const Addactivitymodal = ({
+  modalVisible,
+  setModalVisible,
+}: Addtaskmodal_I) => {
   const [title, setTitle] = useState("");
+  const [location, setLocation] = useState("");
+  const [date, setdate] = useState("");
+  const [desc, setdesc] = useState("");
   return (
     <View>
       <Modal
@@ -17,13 +23,36 @@ const Addtaskmodal = ({ modalVisible, setModalVisible }: Addtaskmodal_I) => {
         }}
       >
         <View style={Modalstyles.addModalWrapper}>
-          <Text style={Modalstyles.addTitle}>Add Task</Text>
+          <Text style={Modalstyles.addTitle}>Add Activity</Text>
           <Inputfield
-            placeholder="Enter details of the tast.."
+            placeholder="Enter title"
+            inputvalue={title}
             setText={setTitle}
             keyboard_type="default"
-            inputvalue={title}
           />
+          <Inputfield
+            placeholder="Enter venue"
+            inputvalue={location}
+            setText={setLocation}
+            keyboard_type="default"
+          />
+          <Inputfield
+            placeholder="Enter date"
+            inputvalue={date}
+            setText={setdate}
+            keyboard_type="default"
+          />
+          <Inputfield
+            placeholder="Enter description"
+            inputvalue={desc}
+            setText={setdesc}
+            keyboard_type="default"
+          />
+          {/* <TextInput
+            style={Modalstyles.input}
+            placeholder="Enter details of task"
+            multiline={true}
+          /> */}
           <View style={Modalstyles.actionBtns}>
             <TouchableOpacity
               style={[Modalstyles.addActionBtn, Modalstyles.actionBtn]}
@@ -43,4 +72,4 @@ const Addtaskmodal = ({ modalVisible, setModalVisible }: Addtaskmodal_I) => {
   );
 };
 
-export default Addtaskmodal;
+export default Addactivitymodal;

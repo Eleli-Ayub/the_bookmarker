@@ -2,9 +2,17 @@ import { StyleSheet } from "react-native";
 import { deviceWidth } from "../Global/Constants";
 
 export const Activitystyles = StyleSheet.create({
+    activityWrapper:{
+        backgroundColor: "#000",
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+        marginTop: 40,
+
+    },
     activityHeaderWrapper:{
         paddingVertical: 20,
         paddingHorizontal: 20,
+        marginBottom: 30
     },
     headerTitle:{
         fontSize: 50,
@@ -30,5 +38,17 @@ export const Activitystyles = StyleSheet.create({
     },
     headerBtnText:{
         color: "#fff"
+    },
+    selectBtns:{
+        marginTop: 40,
+        display: "flex",
+        flexDirection: "row",
+        paddingHorizontal: 40,
+        justifyContent: "space-between"
+    },
+    selectBtn:{
+        backgroundColor: "#7D7272",
+        paddingVertical: 10,
+        paddingHorizontal: 20
     }
 })

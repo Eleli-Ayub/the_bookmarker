@@ -3,14 +3,14 @@ import { deviceHeight, deviceWidth } from "../Global/Constants";
 
 export const Modalstyles = StyleSheet.create({
     addModalWrapper:{
-      height: deviceHeight * 0.3,
       width: deviceWidth * 0.9,
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "white",
       borderRadius: 50,
       alignSelf: "center",
-      marginTop: deviceHeight * 0.3,
+      marginTop: deviceHeight * 0.15,
+      paddingVertical: 20
       
     },
     addTitle:{

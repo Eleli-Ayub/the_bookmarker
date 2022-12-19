@@ -31,3 +31,6 @@ export interface Scrollbar_I {
     modalVisible: boolean,
     setModalVisible: (modalVisible: boolean) => void
   }
+  export interface ActivityselectBtn_I{
+    text: String
+  }

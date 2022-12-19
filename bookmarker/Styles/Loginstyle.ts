@@ -32,7 +32,7 @@ export const Loginstyles = StyleSheet.create({
         margin: 10,
         padding: 10,
         textAlign: "center",
-        color: "#fff",
+        color: "#000",
         fontSize: 18,
     },
     loginBtn:{
