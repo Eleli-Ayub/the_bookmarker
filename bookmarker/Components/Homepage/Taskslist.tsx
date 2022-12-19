@@ -6,7 +6,7 @@ import { Tasks } from "../../Global/Data";
 import TaskListItem from "./TaskListItem";
 
 const Taskslist = () => {
-  const titles = ["All", "Overdue", "Upcoming", "Done"];
+  const titles = ["All Tasks", "Not Done", "Done Tasks"];
   return (
     <View>
       <Text>Taskslist</Text>
