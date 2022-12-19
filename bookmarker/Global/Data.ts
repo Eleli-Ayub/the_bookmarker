@@ -72,12 +72,12 @@ export const Tasks=[
         idDone: false
     },
     {
-        title: "LOgin to kra",
-        idDone: false
+        title: "Login to kra",
+        idDone: true
     },
     {
         title: "Create About page",
-        idDone: false
+        idDone: true
     },
     {
         title: "Style the Homepage",
@@ -89,6 +89,54 @@ export const Tasks=[
     },
     {
         title: "Create Homepage",
+        idDone: true
+    },
+    {
+        title: "Style the button",
         idDone: false
+    },
+    {
+        title: "Do assignments",
+        idDone: true
+    },
+    {
+        title: "Workout",
+        idDone: true
+    },
+    {
+        title: "Connect to API",
+        idDone: true
+    },
+    {
+        title: "Deploy website",
+        idDone: true
+    },
+    {
+        title: "Install antivirus",
+        idDone: false
+    },
+    {
+        title: "Call your friend",
+        idDone: false
+    },
+    {
+        title: "Login to kra",
+        idDone: true
+    },
+    {
+        title: "Create About page",
+        idDone: true
+    },
+    {
+        title: "Style the Homepage",
+        idDone: false
+    },
+    {
+        title: "Create footer",
+        idDone: false
+    },
+    {
+        title: "Create Homepage",
+        idDone: true
     },
 ]

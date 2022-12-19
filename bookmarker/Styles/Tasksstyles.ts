@@ -1,7 +1,13 @@
 import { StyleSheet } from "react-native";
+import { deviceHeight } from "../Global/Constants";
 
 export const TaskStyles =  StyleSheet.create({
-    Taskswrapper:{},
+    Taskswrapper:{
+        backgroundColor: "#000",
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30
+      
+    },
     Headerwrapper:{
         display: "flex",
         flexDirection: "column",
