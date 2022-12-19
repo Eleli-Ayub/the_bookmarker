@@ -7,6 +7,7 @@ import Register from "../Screens/Auth/Register";
 import { StatusBar } from "expo-status-bar";
 import Homepage from "../Screens/Homepage";
 import Mytasks from "../Screens/Mytasks";
+import Myactivities from "../Screens/Myactivities";
 
 const index = () => {
   const Stack = createNativeStackNavigator();
@@ -30,6 +31,12 @@ const index = () => {
       <Stack.Screen
         name="Tasks"
         component={Mytasks}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="Activities"
+        component={Myactivities}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

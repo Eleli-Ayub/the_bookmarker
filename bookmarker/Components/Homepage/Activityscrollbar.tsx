@@ -9,15 +9,22 @@ import React from "react";
 import { Homepagestyles } from "../../Styles/Homepage";
 import { activities } from "../../Global/Data";
 import ActivityscrollbarItem from "./ActivityscrollbarItem";
+import { useNavigation } from "@react-navigation/native";
 
 const Activityscrollbar = () => {
+  const navigation = useNavigation();
   return (
     <View style={Homepagestyles.activityScrollViewWrapper}>
       <View style={Homepagestyles.activityScrollViewTitles}>
         <Text style={Homepagestyles.activityScrollViewTitle}>
           Soon to happen activities
         </Text>
-        <TouchableOpacity style={Homepagestyles.viewAllActivityBtn}>
+        <TouchableOpacity
+          style={Homepagestyles.viewAllActivityBtn}
+          onPress={() => {
+            navigation.navigate("Activities");
+          }}
+        >
           <Text style={Homepagestyles.viewAllActivityBtnText}>View All</Text>
         </TouchableOpacity>
       </View>
