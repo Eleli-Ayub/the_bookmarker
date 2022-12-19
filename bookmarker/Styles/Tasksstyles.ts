@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { deviceHeight } from "../Global/Constants";
+import { deviceHeight, deviceWidth } from "../Global/Constants";
 
 export const TaskStyles =  StyleSheet.create({
     Taskswrapper:{
@@ -36,4 +36,7 @@ export const TaskStyles =  StyleSheet.create({
     HeaderButtonText:{
         color: "#ddd"
     },
+    addBtn:{
+        alignSelf: "center"
+    }
 })

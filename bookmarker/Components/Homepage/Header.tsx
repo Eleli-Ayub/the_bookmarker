@@ -1,8 +1,10 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Homepagestyles } from "../../Styles/Homepage";
+import { useNavigation } from "@react-navigation/native";
 
 const Header = () => {
+  const navigation = useNavigation();
   const [currentDate, setCurrentDate] = useState("");
   const [currentTime, setCurrentTime] = useState("");
   useEffect(() => {
@@ -23,7 +25,12 @@ const Header = () => {
         <Text style={Homepagestyles.dateText}>{currentDate}</Text>
         <Text style={Homepagestyles.timeText}>{currentTime}</Text>
       </View>
-      <TouchableOpacity style={Homepagestyles.myTasksButton}>
+      <TouchableOpacity
+        style={Homepagestyles.myTasksButton}
+        onPress={() => {
+          navigation.navigate("Tasks");
+        }}
+      >
         <Text style={Homepagestyles.myTasksButtonText}>My Tasks</Text>
       </TouchableOpacity>
     </View>

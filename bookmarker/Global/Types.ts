@@ -27,3 +27,7 @@ export interface Scrollbar_I {
     text: String,
     isDone: boolean
   }
+  export interface Addtaskmodal_I{
+    modalVisible: boolean,
+    setModalVisible: (modalVisible: boolean) => void
+  }
